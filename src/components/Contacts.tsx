@@ -1,19 +1,37 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
+const API_URL = "https://functions.poehali.dev/d2d53f07-ca5f-4680-81e4-5049c2f72262";
+
 const Contacts = () => {
   const [form, setForm] = useState({ name: "", phone: "", tour: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", phone: "", tour: "", message: "" });
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Ошибка отправки");
+      setSubmitted(true);
+      setForm({ name: "", phone: "", tour: "", message: "" });
+    } catch {
+      setError("Не удалось отправить заявку. Позвоните нам напрямую: +7 951 132-54-14");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -192,12 +210,29 @@ const Contacts = () => {
                   />
                 </div>
 
+                {error && (
+                  <div className="bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 flex items-start gap-2">
+                    <Icon name="AlertCircle" size={16} className="text-red-400 mt-0.5 flex-shrink-0" />
+                    <p className="font-montserrat text-sm text-red-300">{error}</p>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="btn-orange w-full py-4 rounded-xl text-base font-bold flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,120,0,0.3)]"
+                  disabled={loading}
+                  className="btn-orange w-full py-4 rounded-xl text-base font-bold flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,120,0,0.3)] disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                  <Icon name="Send" size={18} />
-                  Отправить заявку
+                  {loading ? (
+                    <>
+                      <Icon name="Loader" size={18} className="animate-spin" />
+                      Отправляем...
+                    </>
+                  ) : (
+                    <>
+                      <Icon name="Send" size={18} />
+                      Отправить заявку
+                    </>
+                  )}
                 </button>
 
                 <p className="font-montserrat text-xs text-white/30 text-center">
