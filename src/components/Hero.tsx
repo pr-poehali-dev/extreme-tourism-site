@@ -65,23 +65,7 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Stats */}
-        <div className="animate-fade-in-delay-3 grid grid-cols-3 gap-6 max-w-md mx-auto mt-16">
-          {[
-            { value: "5+", label: "лет опыта" },
-            { value: "300+", label: "туристов" },
-            { value: "100%", label: "безопасность" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-oswald text-3xl font-bold text-orange-accent">
-                {stat.value}
-              </div>
-              <div className="font-montserrat text-xs text-white/50 uppercase tracking-wider mt-1">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       {/* Scroll indicator */}
