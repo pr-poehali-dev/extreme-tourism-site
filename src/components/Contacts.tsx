@@ -63,16 +63,16 @@ const Contacts = () => {
             {/* Phone */}
             <a
               href="tel:+79511325414"
-              className="flex items-center gap-4 bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 hover:border-orange-accent/50 hover:shadow-[0_0_25px_rgba(255,120,0,0.15)] transition-all group"
+              className="flex items-center gap-4 bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 group"
             >
-              <div className="w-12 h-12 bg-orange-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-orange-accent rounded-xl flex items-center justify-center flex-shrink-0">
                 <Icon name="Phone" size={22} className="text-white" />
               </div>
               <div>
                 <div className="font-montserrat text-xs text-white/40 uppercase tracking-wider mb-0.5">
                   Телефон
                 </div>
-                <div className="font-oswald text-xl font-bold text-white group-hover:text-orange-accent transition-colors">
+                <div className="font-oswald text-xl font-bold text-white">
                   +7 951 132-54-14
                 </div>
               </div>
@@ -83,16 +83,16 @@ const Contacts = () => {
               href="https://wa.me/79511325414"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 hover:border-orange-accent/50 hover:shadow-[0_0_25px_rgba(255,120,0,0.15)] transition-all group"
+              className="flex items-center gap-4 bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 group"
             >
-              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Icon name="MessageCircle" size={22} className="text-white" />
               </div>
               <div>
                 <div className="font-montserrat text-xs text-white/40 uppercase tracking-wider mb-0.5">
                   WhatsApp
                 </div>
-                <div className="font-oswald text-xl font-bold text-white group-hover:text-orange-accent transition-colors">
+                <div className="font-oswald text-xl font-bold text-white">
                   +7 951 132-54-14
                 </div>
               </div>
@@ -101,16 +101,16 @@ const Contacts = () => {
             {/* Email */}
             <a
               href="mailto:info@pikpriklyucheniy.ru"
-              className="flex items-center gap-4 bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 hover:border-orange-accent/50 hover:shadow-[0_0_25px_rgba(255,120,0,0.15)] transition-all group"
+              className="flex items-center gap-4 bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 group"
             >
-              <div className="w-12 h-12 bg-[hsl(270,60%,35%)] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-[hsl(270,60%,35%)] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Icon name="Mail" size={22} className="text-white" />
               </div>
               <div>
                 <div className="font-montserrat text-xs text-white/40 uppercase tracking-wider mb-0.5">
                   Email
                 </div>
-                <div className="font-oswald text-lg font-bold text-white group-hover:text-orange-accent transition-colors">
+                <div className="font-oswald text-lg font-bold text-white">
                   info@pikpriklyucheniy.ru
                 </div>
               </div>
@@ -136,7 +136,7 @@ const Contacts = () => {
             </h3>
 
             {submitted ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center animate-fade-in">
+              <div className="flex flex-col items-center justify-center py-12 text-center">
                 <div className="w-16 h-16 bg-orange-accent/20 rounded-full flex items-center justify-center mb-4">
                   <Icon name="CheckCircle" size={32} className="text-orange-accent" />
                 </div>
@@ -158,7 +158,7 @@ const Contacts = () => {
                     onChange={handleChange}
                     required
                     placeholder="Иван Иванов"
-                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 focus:outline-none focus:border-orange-accent transition-colors"
+                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 focus:outline-none focus:border-orange-accent"
                   />
                 </div>
 
@@ -173,7 +173,7 @@ const Contacts = () => {
                     onChange={handleChange}
                     required
                     placeholder="+7 900 000-00-00"
-                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 focus:outline-none focus:border-orange-accent transition-colors"
+                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 focus:outline-none focus:border-orange-accent"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ const Contacts = () => {
                     name="tour"
                     value={form.tour}
                     onChange={handleChange}
-                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white focus:outline-none focus:border-orange-accent transition-colors appearance-none"
+                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white focus:outline-none focus:border-orange-accent appearance-none"
                   >
                     <option value="" className="bg-[hsl(270,55%,15%)]">Выберите тур...</option>
                     <option value="elbrus" className="bg-[hsl(270,55%,15%)]">Эльбрус: Покорение вершины</option>
@@ -206,7 +206,7 @@ const Contacts = () => {
                     onChange={handleChange}
                     rows={3}
                     placeholder="Расскажите о себе: опыт, физическая подготовка, пожелания..."
-                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 focus:outline-none focus:border-orange-accent transition-colors resize-none"
+                    className="w-full bg-[hsl(270,45%,16%)] border border-[hsl(270,30%,25%)] rounded-xl px-4 py-3 font-montserrat text-sm text-white placeholder-white/30 focus:outline-none focus:border-orange-accent resize-none"
                   />
                 </div>
 

@@ -44,7 +44,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <button
                     onClick={() => scrollTo(link.href)}
-                    className="font-montserrat text-sm text-white/50 hover:text-orange-accent transition-colors"
+                    className="font-montserrat text-sm text-white/50 hover:text-orange-accent"
                   >
                     {link.label}
                   </button>
@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="space-y-3">
               <a
                 href="tel:+79511325414"
-                className="flex items-center gap-3 font-montserrat text-sm text-white/50 hover:text-orange-accent transition-colors"
+                className="flex items-center gap-3 font-montserrat text-sm text-white/50 hover:text-orange-accent"
               >
                 <Icon name="Phone" size={14} className="text-orange-accent" />
                 +7 951 132-54-14
@@ -70,14 +70,14 @@ const Footer = () => {
                 href="https://wa.me/79511325414"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 font-montserrat text-sm text-white/50 hover:text-orange-accent transition-colors"
+                className="flex items-center gap-3 font-montserrat text-sm text-white/50 hover:text-orange-accent"
               >
                 <Icon name="MessageCircle" size={14} className="text-orange-accent" />
                 WhatsApp
               </a>
               <a
                 href="mailto:info@pikpriklyucheniy.ru"
-                className="flex items-center gap-3 font-montserrat text-sm text-white/50 hover:text-orange-accent transition-colors"
+                className="flex items-center gap-3 font-montserrat text-sm text-white/50 hover:text-orange-accent"
               >
                 <Icon name="Mail" size={14} className="text-orange-accent" />
                 info@pikpriklyucheniy.ru

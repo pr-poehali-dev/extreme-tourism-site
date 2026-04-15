@@ -30,25 +30,25 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="animate-fade-in">
+        <div>
           <span className="inline-block font-montserrat text-orange-accent text-sm font-semibold tracking-[0.3em] uppercase mb-6 border border-orange-accent/40 px-4 py-1.5 rounded-full">
             Экстремальный туризм по России
           </span>
         </div>
 
-        <h1 className="animate-fade-in-delay-1 font-oswald text-6xl md:text-8xl font-bold text-white leading-none mb-4 uppercase tracking-wide">
+        <h1 className="font-oswald text-6xl md:text-8xl font-bold text-white leading-none mb-4 uppercase tracking-wide">
           Покори{" "}
           <span className="text-gradient-orange">вершины</span>
           <br />
           России
         </h1>
 
-        <p className="animate-fade-in-delay-2 font-montserrat text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="font-montserrat text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
           Эльбрус, Байкал, Камчатка, Алтай, Кавказ — реальные приключения для
           тех, кто не боится адреналина и жаждет настоящих эмоций
         </p>
 
-        <div className="animate-fade-in-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={scrollToTours}
             className="btn-orange px-10 py-4 rounded-xl text-base font-bold flex items-center gap-2 shadow-[0_0_30px_rgba(255,120,0,0.4)]"
@@ -71,7 +71,7 @@ const Hero = () => {
       {/* Scroll indicator */}
       <button
         onClick={scrollToTours}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 hover:text-orange-accent transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40"
       >
         <span className="font-montserrat text-xs tracking-widest uppercase">
           Листай

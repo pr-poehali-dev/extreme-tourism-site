@@ -94,7 +94,7 @@ const TourModal = ({ tour, onClose, onBook }: TourModalProps) => (
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(270,55%,12%)] to-transparent" />
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 bg-black/50 rounded-full p-2 text-white hover:text-orange-accent transition-colors"
+          className="absolute top-4 right-4 bg-black/50 rounded-full p-2 text-white hover:text-orange-accent"
         >
           <Icon name="X" size={20} />
         </button>
@@ -176,8 +176,7 @@ const Tours = () => {
           {tours.map((tour, index) => (
             <div
               key={tour.id}
-              className="group bg-[hsl(270,55%,12%)] border border-[hsl(270,30%,22%)] rounded-2xl overflow-hidden card-glow cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group bg-[hsl(270,55%,12%)] border border-[hsl(270,30%,22%)] rounded-2xl overflow-hidden cursor-pointer"
               onClick={() => setSelectedTour(tour)}
             >
               {/* Image */}
@@ -185,7 +184,7 @@ const Tours = () => {
                 <img
                   src={tour.image}
                   alt={tour.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(270,55%,12%)] via-transparent to-transparent" />
                 <div className="absolute top-3 left-3">

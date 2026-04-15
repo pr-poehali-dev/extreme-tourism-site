@@ -68,10 +68,10 @@ const Gallery = () => {
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-56 md:h-64 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100" />
+              <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100">
                 <span className="text-xs font-montserrat text-orange-accent font-semibold tracking-wider uppercase mb-1">
                   {item.tag}
                 </span>
@@ -79,7 +79,7 @@ const Gallery = () => {
                   {item.title}
                 </h4>
               </div>
-              <div className="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 opacity-0 group-hover:opacity-100">
                 <Icon name="ZoomIn" size={14} className="text-white" />
               </div>
             </div>
@@ -109,7 +109,7 @@ const Gallery = () => {
             </div>
             <button
               onClick={() => setLightbox(null)}
-              className="absolute -top-4 -right-4 bg-orange-accent rounded-full p-2 text-white hover:bg-orange-dark transition-colors shadow-lg"
+              className="absolute -top-4 -right-4 bg-orange-accent rounded-full p-2 text-white shadow-lg"
             >
               <Icon name="X" size={20} />
             </button>

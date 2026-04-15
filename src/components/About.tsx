@@ -95,9 +95,9 @@ const About = () => {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 hover:border-orange-accent/40 transition-colors group"
+                className="bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-xl p-5 group"
               >
-                <div className="w-10 h-10 bg-orange-accent/15 rounded-lg flex items-center justify-center mb-3 group-hover:bg-orange-accent/25 transition-colors">
+                <div className="w-10 h-10 bg-orange-accent/15 rounded-lg flex items-center justify-center mb-3">
                   <Icon name={f.icon} size={20} className="text-orange-accent" />
                 </div>
                 <h4 className="font-oswald text-base font-bold text-white mb-1.5">
@@ -120,7 +120,7 @@ const About = () => {
             {team.map((member) => (
               <div
                 key={member.name}
-                className="bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-2xl p-6 text-center hover:border-orange-accent/40 hover:shadow-[0_0_30px_rgba(255,120,0,0.15)] transition-all"
+                className="bg-[hsl(270,50%,14%)] border border-[hsl(270,30%,22%)] rounded-2xl p-6 text-center"
               >
                 <div className="w-16 h-16 bg-orange-accent/15 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
                   {member.emoji}
